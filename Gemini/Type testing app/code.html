@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Single Word Typing Test</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Single Word Typing Test</h1>
+
+  <label for="difficulty">Difficulty:</label>
+  <select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <p id="word"></p>
+  <div id="typingAreaContainer">
+    <input type="text" id="typingArea">
+    <div id="highlightedWord"></div>
+  </div>
+  <p id="accuracy"></p>
+  <p id="wpm"></p>
+  <p id="time"></p>
+  <button id="newWord">New Word</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

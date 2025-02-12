@@ -1,0 +1,79 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#word {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#typingAreaContainer {
+  position: relative; /* Required for absolute positioning of highlightedWord */
+  display: inline-block; /* Ensures the container wraps the input and highlight */
+}
+
+#typingArea {
+  font-size: 1.5em;
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 300px; /* Adjust as needed */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  position: relative;
+  z-index: 1; /* Ensure input is above highlighted text */
+  background-color: transparent; /* Make the input background transparent */
+  color: black; /* Or any color that provides enough contrast */
+}
+
+#highlightedWord {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5em;
+  padding: 5px;
+  width: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
+  pointer-events: none; /* Make the highlightedWord non-interactive */
+  z-index: 0; /* Ensure it's behind the input */
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+#accuracy, #wpm, #time {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #typingArea {
+    width: 90%;
+  }
+
+  #highlightedWord {
+    width: 90%;
+  }
+}
